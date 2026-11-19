@@ -74,4 +74,59 @@ Forms and Tables
 
 Media, Motion, and Alternatives
 
-    Motion was the only element that was implemented in the website via a hover state when hovering the cursor over the card elements (like the project and social cards).
+    Motion was the only element that was implemented in the website via a hover state when hovering the cursor over the card elements (like the project and social cards). While this is a simple animation, a @media (prefers-reduced-motion: reduce) media query was applied just in case if the animation triggers a response in individuals who might be sensitive to increased motion.
+
+    Alt text, as mentioned before, have been reviewed based on their purpose and includes appropriate wording.  
+
+    The website does not currently use SVGs, audio, video, or embedded media, so labels, captions, transcripts, and embed titles are not applicable.
+
+Automated and Manual Evidence
+
+    For this section, I used Lighthouse for each page. Here are the results for each one:
+
+           Home:
+                -Performance: 95
+                -Accessibility: 100
+                -Best Practices: 96
+                -SEO: 100  
+           
+            Projects:
+                -Performance: 93
+                -Accessibility: 98
+                -Best Practices: 96
+                -SEO: 100 
+           
+            Contact: 
+                -Performance: 99
+                -Accessibility: 98
+                -Best Practices: 96
+                -SEO: 100 
+
+    Manual Evidence:
+
+         Keyboard-only walkthrough: Navigated all three pages using Tab, Shift+Tab, and Enter.
+
+         Browser stress test: Tested 200% zoom, narrow reflow, and increased text spacing; findings listed in "Zoom, Reflow, Text Spacing, and Contrast".  
+
+         Semantic/visual review: Manually inspected heading order, landmarks, link purpose, alternative text, responsive behavior, and visible states.   
+
+Screen Reader / Accessibility-Tree Sampling
+
+        Screen-reader testing was performed on the website to check whether navigation links, headings, images, project links, and other important content were announced clearly and in a logical order. The test was used to identify elements that were missing or had unclear accessible names and to verify that the current page could be understood without relying only on visual information. The results show that everything was able to be read by the screen reader. Something to note was that the img and the link have a similar title, making the narration from the screen reader a little redundant (if that makese sense).
+
+   
+
+Remediation Log will be in a PDF
+
+
+Conformance Summary
+    
+        Overall the portfolio seems to be ticking most of the boxes in terms of accessibility as far as the testing has done. It uses semantic HTML landmarks, appropriate page titles, logical heading structure, responsive design, visible keyboard focus, current page indicators, alt text on images, and has reduced motion. We've looked at the keyboard navigation, zoom, reflow, text spacing, contrast and screen reader behaviour across the Home, Projects and Contact pages.
+
+        Several accessibility issues were found and fixed during testing (generic page titles, missing page level headings, a number of unnecessary keyboard focus stops due to tabindex, inaccurate alt text). Navigation was given an accessible name. The remaining items that should be checked prior to final release are that the project card overlay behaves in an equivalent way during keyboard focus and that the mailto on the Contact page is corrected to match the email address that is displayed.
+
+        Forms, tables, audio, video, SVGs and embedded media are not used in this version of the accessibility review and so were not relevant. Prior to final release the site should be subjected to one final automated accessibility check and then one final manual review (keyboard, 200% zoom/reflow, contrast, reduced motion and screen reader) to ensure that the remaining fixes are all working correctly and that no new accessibility issues have been introduced.
+    
+AI Disclosure
+
+        AI was used to scan the intial pages to see what issues it could find on each page. While it did figure out a couple of issues, it was up to me to verify the issues myself. When I found each issue, with the help of what the AI found, I 
